@@ -1152,7 +1152,7 @@ quadGate.tmix <- function(fr, channels, K, usePrior = "yes", prior = list(NA)
           , max.v, max.v
           , p.TR[1], max.v
       )
-      , 5, 2
+      , 4, 2
       , byrow = TRUE
   )  
   colnames(q2.coord) <- channels    
@@ -1175,7 +1175,7 @@ quadGate.tmix <- function(fr, channels, K, usePrior = "yes", prior = list(NA)
           , p.BL[1], min.v
           , min.v, min.v
       )
-      , 5, 2
+      , 4, 2
       , byrow = TRUE
   )
   colnames(q4.coord) <- channels    
