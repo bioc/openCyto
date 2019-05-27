@@ -484,8 +484,8 @@ setMethod("gating", signature = c("polyFunctions", "GatingSetList"),
     isExist <- new_name %in% gs_nodes
     if (!isExist) {
       message("adding ", new_name, " ...")
-
-      bf <- char2booleanFilter(polyExpr)
+      
+      bf <- eval(substitute(booleanFilter(v), list(v = as.symbol(polyExpr))))
 
       invisible(gs_node_id <- .addGate_fast(y, bf, parent = parent, name = polyExpr))
       
